@@ -1,0 +1,9 @@
+{
+    "name": "abc/cde",
+    "autoload": {
+        "psr-4": {
+            "Abc\\Cde\\": "src/"
+        }
+    },
+    "require": {}
+}

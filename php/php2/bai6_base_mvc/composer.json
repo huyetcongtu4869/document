@@ -1,0 +1,13 @@
+{
+    "name": "abc/cde",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "phroute/phroute": "^2.2",
+        "illuminate/events": "^9.51",
+        "composer require": "^4.8"
+    }
+}

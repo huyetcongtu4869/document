@@ -1,0 +1,26 @@
+<?php $_shouldextend[1]=1; ?>
+<?php $this->startSection('content'); ?>
+ <table>
+ <tr>
+ <td>Id</td>
+ <td>Tên danh mục</td>
+ </tr>
+ <?php $__currentLoopData = $category; $this->addLoop($__currentLoopData);$this->getFirstLoop();
+ foreach($__currentLoopData as $cate): $loop = $this->incrementLoopIndices();  ?>
+ <tr>
+ <td><?php echo \htmlentities($cate->id??'', ENT_QUOTES, 'UTF-8', false); ?></td>
+ <td><?php echo \htmlentities($cate->categoryName??'', ENT_QUOTES, 'UTF-8', false); ?></td>
+ <td>
+ <a href="<?php echo \htmlentities(route('edit-category/'.$cate->id)??'', ENT_QUOTES, 'UTF-8', false); ?>">Sửa</a>
+ <?php if($cate->categoryName!="demo1"): ?>
+ <a href="<?php echo \htmlentities(route('delete-category/'.$cate->id)??'', ENT_QUOTES, 'UTF-8', false); ?>">Xóa</a>
+ <?php endif; ?>
+ </td>
+ </tr>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </table>
+ <a href="<?php echo \htmlentities(route('add-category')??'', ENT_QUOTES, 'UTF-8', false); ?>">Thêm</a>
+
+<?php $this->stopSection(); ?>
+
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layout.main'); } ?>
