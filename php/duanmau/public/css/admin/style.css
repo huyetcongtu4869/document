@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.logo {
+    height: 100px;
+}
+
+menu {
+    background: #4A4A4A;
+    height: 100%;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+li {
+    display: block;
+    width: 255px;
+    height: 38px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding-left: 10px;
+}
+
+a {
+    text-decoration: none;
+    line-height: 38px;
+    font-size: 16px;
+    color: black;
+    font-weight: 400;
+    padding-left: 15px;
+}
+
+.acc {
+    height: 100px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.acc img {
+    width: 100%;
+    height: 100%;
+}
+
+.ring {
+    width: 20px;
+    height: 20px;
+}
+
+.user {
+    margin: 15px;
+    display: inline;
+}
+
+.user p {
+    display: inline;
+}
+
+.nu {
+    color: #0066B2;
+}
+
+.avartar {
+    width: 50px;
+    height: 50px;
+}
+
+main {
+    margin: 0 20px;
+}
+
+.background img {
+    width: 100%;
+    height: 240px;
+    position: relative;
+}
+
+.banner {
+    margin-top: 20px;
+    position: relative;
+}
+
+.banner>h1 {
+    line-height: 240px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 40%;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+    margin: 38px 0 20px 0;
+    align-items: center;
+}
+
+.control-action {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+input {
+    height: 30px;
+    padding-left: 5px;
+    margin-right: 3px;
+}
+
+.search button {
+    height: 30px;
+    width: 30px;
+    /* background-color: red; */
+    border: none;
+    margin-left: 0px;
+}
+
+.add {
+    height: 39px;
+    width: 120px;
+    background: #38A169;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+
+table {
+    width: 100%;
+}
+
+table, td, th {
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding-left: 10px;
+}
+
+th {
+    height: 36px;
+    width: 260.5px;
+    background: linear-gradient(0deg, #4A4A4A, #4A4A4A),
+        linear-gradient(0deg, #5B5B5B, #5B5B5B);
+    text-align: left;
+    color: white;
+    font-size: 12px;
+}
+
+/* td {
+    height: 40px;
+} */
+
+.action {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.action button {
+    width: 80px;
+    height: 37px;
+    border-radius: 5px;
+    border: none;
+    line-height: 100%;
+}
+
+.action a {
+    padding: 0;
+    color: white;
+}
+
+.de {
+    background: #AC3131;
+}
+
+.up {
+    background: #1E74A4;
+}
+
+.form-group input {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+}
+
+.form-group select {
+    width: 300px;
+    height: 30px;
+}
+
+.form-group textarea {
+    width: 100%;
+    height: 100px;
+}
+
+.btn {
+    width: 70px;
+    height: 30px;
+    float: right;
+    background-color: #499fe1;
+    border: none;
+    color: white;
+}
+
+
+
+
+
+
+
+.user {
+    display: flex;
+    margin: 10px 0 10px 0;
+}
+
+.avartar {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.avartar img {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    width: 1340px;
+}
+
+.user-name {
+    color: #0066B2;
+}
+
+.delete-comment {
+    width: 50px;
+    height: 30px;
+    border: none;
+    background-color: red;
+    color: white;
+}
+
+.delete-comment a {
+    padding-left: 5px;
+    line-height: 30px;
+}
