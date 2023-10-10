@@ -1,0 +1,68 @@
+.banner {
+    height: 30px;
+}
+
+.banner>h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 32px auto;
+}
+
+form {
+    width: 944px;
+    margin: 0 auto;
+}
+
+select:required:invalid {
+    color: gray;    opacity: 0.2;
+
+}
+
+option[value=""][disabled] {
+    display: none;
+}
+
+label {
+    font-size: 16px;
+}
+
+input {
+    height: 36px;
+    width: 944px;
+    border-radius: 4px;
+    margin-bottom: 32px;
+    margin-top: 8px;
+    padding-left: 16px;
+}
+
+#file {
+    padding: 0;
+}
+
+textarea {
+    height: 167px;
+    width: 944px;
+    padding-left: 16px;
+    padding-top: 8px;
+    margin-bottom: 32px;
+}
+
+select {
+    margin-top: 8px;
+    width: 944px;
+    height: 36px;
+}
+
+button {
+    height: 39px;
+    width: 132px;
+   text-align: center;
+    border-radius: 5px;
+    background: #38A169;
+    color: white;
+    margin: 32px auto;
+    border: none;
+}
+.btn{
+    text-align: center;
+}

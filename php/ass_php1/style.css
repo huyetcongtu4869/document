@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+hr {
+    margin: 40px 0;
+    opacity: 0.5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+    height: 50px;
+}
+
+li {
+    display: inline-block;
+    padding: 16px;
+}
+
+nav, .user {
+    width: 440px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #6768ab;
+}
+
+.logo {
+    height: 50px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.logo>img {
+    width: 150px;
+    height: 100%;
+}
+.banner{
+    height: 675px;
+ 
+}
+.banner img {
+    width: 100%;
+    margin-top: 10px;
+    height: 100%;
+}
+
+.user-signin {
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    width: 440px !important;
+}
+
+.user-signin button{
+    width: 80px;
+    height: 30px;
+    margin: auto 10px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+.btn-login{
+    background-color: #1e74a4;
+}
+.register{
+    background-color: #ac3131;
+}
+.avartar {
+    width: 50px;
+    height: 50px;
+}
+.avartar>img{
+    width: 100%;height: 100%;
+}
+.user{
+    width: 100px;
+    height: 19px;
+    margin: 0 15px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h2 {
+    text-align: center;
+    margin: 15px;
+}
+
+.title>div {
+    height: 3px;
+    width: 60px;
+    background-color: #a4a4b2;
+    margin: auto;
+}
+
+.title {
+    height: 100px;
+    margin: 0;
+
+}
+
+article>img {
+    width: 100%;
+    height: 90%;
+}
+
+.price {
+    font-size: 14px;
+}
+
+/* Product */
+
+.product>section {
+    display: flex;
+    justify-content: space-around;
+    width: 1210px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.product article {
+    width: 226px;
+    height: 400px;
+}
+
+h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+/* Bestsellers */
+.Bestsellers>section {
+    display: flex;
+    justify-content: space-around;
+    width: 1210px;
+    margin: 0 auto;
+    height: 450px;
+}
+
+.Bestsellers article {
+    width: 226px;
+    height: 400px;
+}
+
+/* category */
+.category {
+    width: 1210px;
+    display: grid;
+    grid-template-columns: 200px 1010px;
+    margin: 0 auto;
+    align-items: center;
+    height: 180px;
+}
+
+.category .title h2 {
+    text-align: left;
+    margin: 36px;
+}
+
+.category section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.number-product {
+    opacity: 0.5;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.category article {
+    display: flex !important;
+    gap: 20px;
+    align-items: center;
+    width: 296px;
+}
+
+.category article img {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+}
+
+.info-cate {
+    width: 100px;
+}
+
+.support {
+    width: 1210px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.support section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.support i {
+    font-size: 24px;
+    background-color: white;
+}
+
+.support h6 {
+    font-size: 20px;
+    margin: 16px 0;
+    font-weight: 600;
+}
+
+.support p {
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+footer {
+    background-color: #2f2d3b0d;
+    height: 300px;
+    margin-top: 50px;
+}
+
+footer>div {
+    width: 1210px;
+    display: grid;
+    grid-template-columns: 277px 933px;
+    margin: auto;
+}
+
+.logo-footer {
+    margin-top: 100px;
+}
+
+.info-footer {
+    display: flex;
+    justify-content: space-around;
+    height: 180px;
+    margin: auto 0;
+    margin-top: 100px;
+}
+
+.info-footer>div {
+    width: 231px;
+}
+
+.info-footer h4 {
+    font-size: 16px;
+    opacity: 0.4;
+    margin-bottom: 16px;
+}
+
+.slick-initialized .slick-slide {
+    margin: 0 10px;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    width: 5px;
+    height: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1;
+    z-index: 5;
+    transition: all 0.2s linear;
+}
+
+.slick-arrow:hover i {
+    color: rgb(177, 177, 185);
+}
+
+.slick-prev {
+    left: 0;
+}
+
+.slick-next {
+    right: 0;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0 20px;
+}
+
+.slick-dots button {
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 100rem;
+    background-color: #eee;
+    border: none;
+    outline: none;
+    transition: all 0.2s linear;
+}
+
+.slick-dots .slick-active button {
+    background-color: #2cccff;
+}
