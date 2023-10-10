@@ -1,0 +1,7 @@
+E:\C#1\Bai_3_2_Abstract_Interface\bin\Debug\Bai_3_2_Abstract_Interface.exe.config
+E:\C#1\Bai_3_2_Abstract_Interface\bin\Debug\Bai_3_2_Abstract_Interface.exe
+E:\C#1\Bai_3_2_Abstract_Interface\bin\Debug\Bai_3_2_Abstract_Interface.pdb
+E:\C#1\Bai_3_2_Abstract_Interface\obj\Debug\Bai_3_2_Abstract_Interface.csproj.SuggestedBindingRedirects.cache
+E:\C#1\Bai_3_2_Abstract_Interface\obj\Debug\Bai_3_2_Abstract_Interface.csproj.CoreCompileInputs.cache
+E:\C#1\Bai_3_2_Abstract_Interface\obj\Debug\Bai_3_2_Abstract_Interface.exe
+E:\C#1\Bai_3_2_Abstract_Interface\obj\Debug\Bai_3_2_Abstract_Interface.pdb
