@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Game drag drop</title>
+</head>
+
+<body>
+    <section class="draggable-elements">
+        <i class="fas fa-frog draggable" id="frog" style="color:green" draggable="true"></i>
+        <i class="fas fa-dog draggable" id="dog" style="color:red" draggable="true"></i>
+        <i class="fas fa-cat draggable" id="cat" style="color:blue" draggable="true"></i>
+        <i class="fas fa-fish draggable" id="fish" style="color:yellow" draggable="true"></i>
+        <i class="fas fa-crow draggable" id="crow" style="color:pink" draggable="true"></i>
+    </section>
+
+    <section class="droppable-elements">
+        <div class="droppable" data-id="crow">
+            <span>Bird</span>
+        </div>
+        <div class="droppable" data-id="dog">
+            <span>Dog</span>
+        </div>
+        <div class="droppable" data-id="cat">
+            <span>Cat</span>
+        </div>
+        <div class="droppable" data-id="frog">
+            <span>Frog</span>
+        </div>
+        <div class="droppable" data-id="fish">
+            <span>Fish</span>
+        </div>
+    </section>
+    <script>
+        let draggableElements = document.querySelectorAll(".draggble");
+        let droppableElements = document.querySelectorAll(".droppalbe");
+
+        //Gan cacs su kien len drag
+
+        draggableElements.forEach(elem => { //Mooix phanaf tuwr cos ther keo nếu thấy sự kiến dragstart thì sẽ chạy làm dragStart;
+            elem.addEventListener("draggstart", dragStart);
+        })
+
+        //gán sự kiện trên đối tượng drop
+
+
+        droppableElements.forEach(elem => {
+            elem.addEventListener("dragover", alowDrop);
+            elem.addEventListener("drop", drop);
+        })
+        //Bước 1: xet thuộc tính có thể  kéo đi 
+        //Bước 2: xác định giá trị được drag
+
+        function dragStart(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        //buoc 3:  xét thuộc tính drop cho phép ghi đè 
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        //bước 4:xác định giá trị drop
+
+        function drop(ev) {
+            ev.preventDefault();
+            let draggableElementData = ev.dataTransfer.getData("text");
+            let droppableElementData = ev.target.getAttribute("data-id");
+            if (draggableElementData==draggableElements) {
+                let dragData=document.getElementById(draggableElementData);
+                ev.target.style.bagroundColor=dragData.style.color;
+                ev.target.insertAdjacen("afterbegin",`<i class="fas fa-$(draggableElementData)"></i>`);
+            }
+        }
+    </script>
+</body>
+
+</html>
