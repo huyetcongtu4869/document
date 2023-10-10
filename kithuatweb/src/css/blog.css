@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    width: 1280px;
+    margin: auto;
+    font-family: 'Inter';
+}
+
+/* header */
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 45px 0 65px 0;
+}
+
+.menu1 ul {
+    text-align: center;
+}
+
+.menu1 li {
+    display: inline-block;
+    padding: 0 16px;
+    font-size: 18px;
+    margin: o auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.authenticate {
+    display: flex;
+    align-items: center;
+}
+
+#signin {
+    height: 42px;
+    width: 84px;
+    margin-left: 23.12px;
+    margin-right: 20px;
+    border: 1px #F54748 solid;
+    color: #F54748;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#signup {
+    height: 42px;
+    width: 84px;
+    color: white;
+    background-color: #F54748;
+    border-radius: 5px;
+    border: none;
+}
+
+/* end header */
+.menu2 a {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu2 li {
+    list-style: none;
+    margin-top: 24px;
+}
+
+.menu2 {
+    margin-right: 80px;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+    margin-bottom: 57px;
+}
+
+.listblog {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+.listblog div img{
+    width: 100%;
+    border-radius: 15px;
+}
+.title{
+    margin: 30px 0;
+}
