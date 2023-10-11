@@ -1,0 +1,146 @@
+
+    <h1>Quản Lí danh sách</h1>
+    <div>
+        <input type="search" name="" id="">
+        <label for="">Tên danh mục</label>
+        <input type="search" id="ten"><br>
+        <button type="button" onclick="luu()">Lưu</button>
+        <!-- <button type="button" onclick="">Clear</button> -->
+        <table>
+            <thead>
+                <th>Tên danh mục</th>
+            </thead>
+            <tbody id="table">
+                <td></td>
+            </tbody>
+        </table>
+        <img src="" alt="" id="upload-image">
+        <input type="file" id="upload-input">
+        Here is an example of a login form layout using HTML and CSS from ¹:
+
+```html
+<form>
+  <div class="imgcontainer">
+    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form> 
+
+        <script>
+            let uploadInput=document.getElementById('upload-input');
+            let uploadImage=document.getElementById('upload-image');
+            uploadInput.addEventListener('change',function (event) {
+                let file=event.target.files[0];
+                uploadImage.src=URL.createObjectURL(file    );
+            })
+        </script>
+        <script>
+            let ListCategory = [
+                {
+                    id: 1,
+                    name: "breakfast",
+                    image: "./src/img/index/Group 890.png"
+                },
+                {
+                    id: 2,
+                    name: "vegan",
+                    image: "./src/img/index/Group 879.png"
+                },
+                {
+                    id: 3,
+                    name: "meat",
+                    image: "./src/img/index/Group 891.png"
+                },
+                {
+                    id: 4,
+                    name: "dessert",
+                    image: "./src/img/index/Group 892.png"
+                },
+                {
+                    id: 5,
+                    name: "lunch",
+                    image: "./src/img/index/Group 893.png"
+                },
+                {
+                    id: 6,
+                    name: "chocolate",
+                    image: "./src/img/index/Group 894.png"
+                }
+            ]
+            loadTable();
+            let x = -1;
+            function them() {
+                let ten = document.getElementById("ten").value;
+
+                let sp = {
+                    name: ten,
+
+                };
+
+                ListCategory.push(sp);
+                document.getElementById("table").innerHTML = "";
+                loadTable();
+            }
+            function loadTable() {
+                let html = "";
+                for (let i = 0; i < ListCategory.length; i++) {
+                    let tableRow = `<tr>
+            <td>${ListCategory[i].name}</td>
+            <td>
+            <button onclick="capNhat(${i})">Cập nhật </Button>
+            </td>
+            <td>
+            <button onclick="xoa(${i})">Xóa</Button>
+            </td>
+            </tr>`;
+                    html = html + tableRow;
+                }
+                document.getElementById("table").innerHTML = html;
+            }
+
+            function capNhat(i) {
+                x = i;
+                let sp = ListCategory[i];
+                document.getElementById("ten").value = sp.name;
+
+                console.log(ListCategory[i]);
+            }
+            function xoa(i) {
+                ListCategory.splice(i, 1);
+                loadTable();
+            }
+            function luu() {
+                if (x == -1) {
+                    them();
+                }
+                else {
+                    capNhatArray();
+                }
+            }
+            function capNhatArray() {
+                let ten = document.getElementById("ten").value;
+                ListCategory[x].name = ten;
+                loadTable();
+            }
+        </script>
+    </div>
+</body>
+
+</html>

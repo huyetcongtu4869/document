@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="text" id="so1" value="">
+    <input type="text" id="so2" value="">
+    <input type="text" id="kq" value="kết quả">
+    <button onclick="tong()">+</button>
+    <button onclick="hieu()">-</button>
+    <button onclick="tich()">x</button>
+    <button onclick="thuong()">:</button>
+    <script>
+        let so1 = document.getElementById('so1');
+        let so2 = document.getElementById('so2');
+        let kq = document.getElementById('kq');
+        function tong() {
+            kq.value = parseInt(so1.value) + parseInt(so2.value);
+            console.log(kq.value);
+        } function hieu() {
+            kq.value = parseInt(so1.value) - parseInt(so2.value);
+            console.log(kq.value);
+        } function tich() {
+            kq.value = parseInt(so1.value) * parseInt(so2.value);
+            console.log(kq.value);
+        } function thuong() {
+            kq.value = parseInt(so1.value) / parseInt(so2.value);
+            console.log(kq.value);
+        }
+    </script> -->
+    Họ tên
+    <input type="text" id="hoTen" value=""><br>
+    Mã số sinh viên
+    <input type="text" id="MSSV" value=""><br>
+    Chuyên ngành
+    <input type="text" id="nganh" value=""><br>
+    <button onclick="doc()">đọc</button>
+    <script>
+        function doc() {
+            luuTru.ho_Ten = document.getElementById("hoTen").value;
+            luuTru.mssv = document.getElementById("MSSV").value;
+            luuTru.nganh = document.getElementById("nganh").value;
+            if (luuTru.ho_Ten.length == 0) {
+                alert("không được để trống");
+                return;
+            }
+            if (luuTru.nganh.length == 0) {
+                alert("không được để trống");
+                return;
+            }
+            // if (mssv.length < 7) {
+            //     alert("cần ít nhất 7 kí tự");
+            // }
+            if ( luuTru.mssv.length == 0) {
+                alert("không được để trống");
+                return;
+            }
+            if ( luuTru.mssv.length != 7) {
+                alert("mã sinh viên phải có 7 kí tự");
+                return;
+            }
+            console.log(hoTen.value);
+            console.log(mssv.value);
+            console.log(nganh.value);
+        }
+        let luuTru = {
+            ho_Ten: "",
+            mssv: '',
+            nganh: ''
+        };
+    </script>
+
+
+</body>
+
+</html>

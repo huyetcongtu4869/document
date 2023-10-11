@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <button onclick="myFunction()">Click me</button>
+    <div class="demo"></div>
+    <script>let dem = 0;
+        function myFunction() {
+            dem++;
+            //   alert(dem)  ;
+                    document.querySelector('.demo').innerHTML = dem;
+
+        }
+        document.querySelector('.demo').innerHTML = dem;
+
+    </script>
+    <!-- <div>
+        Họ tên: <input type="text" id="hoten" value=""> <br>
+        Mã SV <input type="text" id="mssv" value=""><br>
+        Chuyên ngành <input type="text" id="chuyenNganh" value=""><br>
+        học kỳ <input type="text" id="hocKy" value=""><br>
+        <button onclick="them()">Thêm</button>
+    </div>
+    <script>
+        let luuTru = {
+            ho_Ten: "",
+            mssv: "",
+            chuyen_Nganh: "",
+            hoc_ky: 0,
+        }
+        function them() {
+            luuTru.ho_Ten = document.getElementById("hoten").value;
+            luuTru.mssv = document.getElementById("mssv").value;
+            luuTru.chuyen_Nganh = document.getElementById("chuyenNganh").value;
+            luuTru.hoc_ky = document.getElementById("hocKy").value;
+            if (luuTru.ho_Ten.length == 0 && luuTru.mssv.length == 0 && luuTru.chuyen_Nganh.length == 0 && luuTru.hoc_ky == 0) {
+                alert("không được để trống");
+                return;
+            }
+            if (luuTru.mssv.length != 7) {
+                alert("mã số sinh viên phải có 7 ký tự");
+                return;
+            }
+            if (luuTru.hoc_ky < 1 && luuTru.hoc_ky > 11) {
+                alert("Học kỳ phải là các số trong khoảng 1-11");
+                return;
+            }
+            if (luuTru.mssv.length[1] != 'P' && luuTru.mssv.length[2] != 'H') {
+                alert("Mã sinh viên phải bắt đầu bằng PH ");
+                return;
+            }
+            alert(luuTru.ho_Ten);
+            alert(luuTru.mssv);
+            alert( luuTru.chuyen_Nganh);
+            alert( luuTru.hoc_ky);
+        }
+    </script> -->
+</body>
+
+</html>

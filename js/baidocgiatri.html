@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label id="sothunhat">số thứ nhất</label>
+    <input type="text" id="so1" value="">
+    <label id="sothu2">số thứ hai</label>
+    <input type="text" id="so2" value="">
+    <label id="sothu3">số thứ ba</label>
+    <input type="text" id="so3" value="">
+    <button onclick="tinh()">tinh</button>
+    <script>
+        function tinh() {
+            let a = document.getElementById("so1").value;
+            let b = document.getElementById("so2").value;
+            let c = document.getElementById("so2").value;
+            if (isNaN(a) == true && a != 0) {
+                alert("vui long nhập số và khác không");
+                document.getElementById("sothunhat").style.color = "red";
+                return;
+            }
+            if (isNaN(b) == true) {
+                alert("vui lòng nhập sô");
+                document.getElementById("sothu2").style.color = "red";
+                return;
+            }
+            if (isNaN(c) == true) {
+                alert("vui lòng nhập sô");
+                document.getElementById("sothu2").style.color = "red";
+                return;
+            }
+            let delta = b * b - a * c * 4;
+            if (delta == 0) {
+                let x = -b / (2 * a);
+                alert("pt có nghiệm kép: " + x);
+            }
+            else if (delta < 0) {
+                alert("Vô nghiệm:")
+            }
+            else {
+                let x1 = ((-b) + Math.sqrt(delta)) / (2 * a);
+                alert("nghiệm 1: " + x1);
+                let x2 = ((-b) - Math.sqrt(delta)) / (2 * a);
+                alert("nghiệm 2: " + x2);
+            }
+        }
+    </script>
+</body>
+
+</html>

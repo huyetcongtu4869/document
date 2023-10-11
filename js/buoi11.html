@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <th>Họ tên</th>
+            <th>Mã sinh viên</th>
+            <th>Chuyên ngành</th>
+            <th>Học kỳ</th>
+        </thead>
+        <tbody id="table_body">
+
+        </tbody>
+    </table>
+    <script>
+        let sv = {
+            ho_ten: "Nguyễn văn A",
+            ma_sv: "PH1",
+            chuyen_nganh: "TKw",
+            hoc_ky: 1,
+        };
+        let elementHt = document.createElement("td");
+        elementHt.innerText = sv.ho_ten;
+        let elementMssv = document.createElement("td");
+        elementMssv.innerText = sv.ma_sv;
+        let elementCn = document.createElement("td");
+        elementCn.innerText = sv.chuyen_nganh;
+        let elementHk = document.createElement("td");
+        elementHk.innerText = sv.hoc_ky;
+        let tableRow = document.createElement('tr');
+        tableRow.append(elementHt);
+        tableRow.append(elementMssv);
+        tableRow.append(elementCn);
+        tableRow.append(elementHk);
+        document.getElementById("table_body").append(tableRow)
+
+        //dùng mảng
+
+    </script>
+</body>
+
+</html>
