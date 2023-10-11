@@ -1,0 +1,15 @@
+<form ng-submit="onSave">
+    <input placeholder="Tên" ng-model="inputs.ten">
+    <p style="color:red" ng-if="!inputs.ten">Yêu cầu nhập tên</p>
+    <!-- Kiểm tra việc lắng nghe dữ liệu của ng-model -->
+    <div>
+        <input type="file" width="100" onchange="angular.element(this).scope().onChangeImg(event)" id="" multiple="multiple" >
+    <img src="../../{{inputs.img}}" alt="">
+    </div>
+    <a href="#!/quan-ly">
+        <button">
+            Huỷ
+            </button>
+    </a>
+    <!-- <button type="submit" ng-click="onSave()">Lưu</button> -->
+</form>

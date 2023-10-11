@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body ng-app="angularApp">
+    <select >
+        <option ng-selected="selected">Hello!</option>
+        <option id="greet" selected >Greetings!</option>
+    </select>
+
+    <header>Header</header>
+    <main>
+        <div ng-controller="MainController">
+            <div>
+                <h1>Thông tin cá nhân</h1>
+                <p>Tên:{{info.ten}}</p>
+                <p>Tuổi:{{info.tuoi}}</p>
+                <p>Địa chỉ:{{info.dia_chi}}</p>
+                <p>Tên:{{info.ten}}</p>
+                <p>Tên:{{info.ten}}</p>
+                <!-- <div>
+                    <input type="text" ng-keyup="layTuoi($event)">
+                    <button ng-click="tangTuoi()">Tăng tuổi</button>
+                </div> -->
+            </div>
+            <div>
+                <div><button ng-click="showForm()">Thêm mới</button></div>
+                <div ng-if="isShowForm">
+                    <form>
+                        Tên <input type="text" placeholder="Tên" ng-model="inputs.ten" value="{{inputs.ten}}"><br>
+                        <p style="color:red" ng-if="!inputs.ten">Yêu cầu nhập tên</p>
+                        Tuổi <input type="number" placeholder="Tuổi" ng-model="inputs.tuoi" value="{{inputs.tuoi}}"><br>
+                        Địa chỉ <input type="text" placeholder="Địa chỉ" ng-model="inputs.dia_chi"
+                            value="{{inputs.dia_chi}}"><br>
+                        Số điện thoại <input type="text" placeholder="Số điện thoại" ng-model="inputs.sdt"
+                            value="{{inputs.sdt}}"><br>
+                        Ảnh <input type="text" placeholder="Ảnh" ng-model="inputs.img" value="{{inputs.img}}"><br>
+                        <!-- <select ng-model="inputs.trang_thai" name="trang_thai" id="trang_thai"  >
+                            <option value="0" selected >On</option>
+                            <option value="1">Off</option>
+                        </select> -->
+                        <p>Trạng thái:</p>
+
+                        <input type="radio" value="0" name="gender" ng-selected="inputs.trang_thai"
+                            ng-model="inputs.trang_thai">
+                        <label for="html">On</label><br>
+                        <input type="radio" value="1" name="gender" g-selected="inputs.trang_thai"
+                            ng-model="inputs.trang_thai">
+                        <label for="css">Off</label><br>
+                        <button type="button" ng-click="save()">Lưu</button>
+                        <button ng-click="hideForm()">Hủy</button>
+                    </form>
+                </div>
+                <table class="table">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Tên</th>
+                            <th scope="col">Tuổi</th>
+                            <th scope="col">Địa chỉ</th>
+                            <th scope="col">Số điện thoại</th>
+                            <th scope="col">Ảnh</th>
+                            <th scope="col">Trạng thái</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="data in nguoi_yeu ">
+                            <td scope="row">{{data.id}}</td>
+                            <td>{{data.ten}}</td>
+                            <td>{{data.tuoi}}</td>
+                            <td>{{data.dia_chi}}</td>
+                            <td>{{data.sdt}}</td>
+                            <th scope="col"><img src="{{data.img}}" alt=""></th>
+                            <!-- <td>{{data.trang_thai==0?"On":"Off"}}</td> -->
+                            <td ng-if="data.trang_thai==1">Off</td>
+                            <td ng-if="data.trang_thai==0">On</td>
+                            <td><button ng-click="onDelete(data.id)">Xóa</button>
+                                <button ng-click="update(data.id)">Sửa</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>Footer</footer>
+    <script src="../libs/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
+    <script>
+        var app = angular.module('angularApp', []).controller('MainController', function ($scope) {
+
+            $scope.info = {
+                ten: 'Nguyễn Văn A',
+                tuoi: 30,
+                dia_chi: "Hà Nội"
+
+            }
+            $scope.nguoi_yeu = [
+                {
+                    id: 1,
+                    ten: 'Nguyễn Thị B',
+                    tuoi: 40,
+                    dia_chi: "Đà Nẵng",
+                    sdt: 32342454,
+                    img: '../img/img (1).png',
+                    trang_thai: 1
+                }, {
+                    id: 2,
+                    ten: 'Nguyễn Thị c',
+                    tuoi: 50,
+                    dia_chi: "Đà Nẵng",
+                    sdt: 32342454,
+                    img: '../img/img (1).png',
+                    trang_thai: 1
+                }
+            ]
+            $scope.tangTuoi = function () {
+                $scope.info.tuoi++
+            }
+            $scope.layTuoi = function (e) {
+                console.log(e.target.value);
+                luu_tru_tuoi = e.target.value
+            }
+            $scope.isShowForm = false;
+            $scope.showForm = function () {
+                $scope.isShowForm = true;
+            }
+            let save = -10
+            $scope.hideForm = function () {
+                $scope.isShowForm = false;
+            }
+            $scope.inputs = {
+                ten: '',
+                tuoi: null,
+                dia_chi: "",
+                sdt: null,
+                img: '',
+                trang_thai: null,
+            }
+            $scope.clearForm = {
+                ten: '',
+                tuoi: null,
+                dia_chi: "",
+                sdt: null,
+                trang_thai: null,
+            }
+            $scope.save = function () {
+                var newObj = {
+                    ...$scope.inputs,
+                    tuoi: +$scope.inputs.tuoi,
+                    id: $scope.nguoi_yeu[$scope.nguoi_yeu.length - 1].id + 1
+                }
+                if (save == -10) {
+                    $scope.nguoi_yeu.push(newObj)
+                }
+                else {
+                    newObj.id = save;
+                    for (let index = 0; index < $scope.nguoi_yeu.length; index++) {
+                        if ($scope.nguoi_yeu[index].id == save) {
+                            $scope.nguoi_yeu[index] = newObj
+                            break
+                        }
+
+                    }
+                }
+                $scope.inputs = $scope.clearForm;
+                $scope.hideForm()
+            }
+            $scope.onDelete = function (deleteId) {
+                if (confirm("Bạn muốn xóa không")) {
+                    let newList = $scope.nguoi_yeu.filter(function (item) { return item.id != deleteId })
+                    $scope.nguoi_yeu = newList
+                }
+
+            }
+            $scope.update = function (id) {
+                save = id - 1;
+                $scope.showForm()
+                let dataUpdate = $scope.nguoi_yeu.find(function (item) { return item.id == id })
+                console.log(dataUpdate);
+                $scope.inputs = dataUpdate;
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>

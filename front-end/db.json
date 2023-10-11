@@ -1,0 +1,140 @@
+{
+  "info": {
+    "ten": "Nguyễn Văn A",
+    "tuoi": 30,
+    "dia_chi": "Hà Nội",
+    "sdt": "0958345423",
+    "email": "huy@gmail.com",
+    "image_url": "https://picsum.photos/id/349/180/100"
+  },
+  "nguoi-yeu": [
+    {
+      "id": 1,
+      "ten": "",
+      "tuoi": 4
+    },
+    {
+      "ten": "Nguyen thi demo",
+      "id": 2
+    },
+    {
+      "ten": "Nguyen thi test",
+      "id": 3
+    },
+    {
+      "ten": "Nguyen thi A",
+      "id": 4
+    },
+    {
+      "ten": "Nguyen thi A",
+      "id": 5
+    },
+    {
+      "ten": "Nguyen thi A",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "ten": ""
+    },
+    {
+      "ten": "Nguyen thi A",
+      "id": 8
+    },
+    {
+      "ten": "Nguyen thi A",
+      "id": 9
+    },
+    {
+      "ten": "Nguyen thi A",
+      "id": 10
+    },
+    {
+      "ten": "Nguyen thi A",
+      "id": 11
+    },
+    {
+      "ten": "Nguyen thi A",
+      "id": 12
+    },
+    {
+      "ten": "",
+      "tuoi": 0,
+      "id": 13
+    }
+  ],
+  "bds": [
+    {
+      "id": 1,
+      "name": "Dự án 1demo1fewf sửa",
+      "type_id": 1,
+      "area": 132,
+      "price": 3123,
+      "image_url": "https://picsum.photos/id/193/180/100",
+      "status": 1
+    },
+    {
+      "id": 2,
+      "name": "Dự án 2",
+      "type_id": 1,
+      "area": 132,
+      "price": 3123,
+      "image_url": "https://picsum.photos/id/193/180/100",
+      "status": 1
+    },
+    {
+      "id": 4,
+      "name": "Dự án 4",
+      "type_id": 1,
+      "area": 132,
+      "price": 3123,
+      "image_url": "https://picsum.photos/id/193/180/100",
+      "status": 1
+    },
+    {
+      "name": "demo",
+      "area": 213,
+      "price": 231,
+      "image_url": "https://picsum.photos/id/193/180/100",
+      "type_id": "1",
+      "status": "2",
+      "id": 5
+    },
+    {
+      "name": "Dự án 1f",
+      "area": 2,
+      "price": 43,
+      "image_url": "https://picsum.photos/id/193/180/100",
+      "type_id": "3",
+      "status": "1",
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "name": "",
+      "id": 10
+    }
+  ],
+  "category_bds": [
+    {
+      "id": 1,
+      "name": "Chung cư"
+    },
+    {
+      "id": 2,
+      "name": "nhà đất"
+    },
+    {
+      "id": 3,
+      "name": "đất"
+    }
+  ]
+}

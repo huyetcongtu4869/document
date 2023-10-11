@@ -1,0 +1,43 @@
+<div class="table-responsive">
+    <table class="table v-middle">
+        <thead>
+            <tr class="bg-light">
+                <th class="border-top-0">#</th>
+                <th class="border-top-0">Tên </th>
+                <th class="border-top-0">Loại</th>
+                <th class="border-top-0">Diện tích(m&#178;)</th>
+                <th class="border-top-0">Giá</th>
+                <th class="border-top-0">Ảnh</th>
+                <th class="border-top-0">Trạng thái</th>
+                <th class="border-top-0">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr ng-repeat="data in ds_bds">
+                <td>{{data.id}}</td>
+                <td>
+                    <a href="#!/detail/{{data.id}}">
+                        <h4 class="m-b-0 font-16">{{data.name}}</h4>
+                    </a>
+                </td>
+                <td>{{category_bds[ds_bds[1].type_id].name}}</td>
+                <td>
+                    <label class="label label-danger">{{data.area}}</label>
+                </td>
+                <td>
+                    <h5 class="m-b-0">{{data.price}} vnđ</h5>
+                </td>
+                <td><img src="{{data.image_url}}" class="img-fluid" alt=""></td>
+                <td ng-if="data.status==0">Chưa bán</td>
+                <td ng-if="data.status==1">Đã cọc</td>
+                <td ng-if="data.status==2">Đã bán</td>
+                <td>
+                    <a href="#!/quan-ly-sua/{{data.id}}"><button type="button" class="btn btn-success">Sửa</button></a>
+                    <button ng-click="onDelete(data.id)" class="btn btn-danger">Xóa</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

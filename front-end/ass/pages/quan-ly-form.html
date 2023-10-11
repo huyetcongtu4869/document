@@ -1,0 +1,42 @@
+<form class="row g-3"ng-submit="onSave">
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Tên</label>
+    <input type="text" class="form-control" id="inputEmail4" ng-model="inputs.name">
+    <p style="color:red" ng-if="!inputs.name">Yêu cầu nhập tên</p>
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Diện tích(m&#178;)</label>
+    <input type="number" class="form-control" id="inputPassword4"ng-model="inputs.area">
+    <p style="color:red" ng-if="!inputs.area">Yêu cầu nhập tên</p>
+
+  </div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Giá</label>
+    <input type="number" class="form-control" id="inputAddress"ng-model="inputs.price">
+  </div>
+  <div class="col-md-4">
+    <label for="inputCity" class="form-label">Ảnh</label>
+    <input type="text" class="form-control" id="inputCity"ng-model="inputs.image_url">
+  </div>
+  <div class="col-md-4">
+    <label for="inputState" class="form-label">Loại</label>
+    <select id="inputState" class="form-select" ng-model="inputs.type_id">
+      <option  value="1">Chung cư</option>
+      <option value="2">Nhà đất</option>
+      <option selected value="3">Đất</option>
+    </select>
+  </div><div class="col-md-4">
+    <label for="inputState" class="form-label">Trạng thái</label>
+    <select id="inputState" class="form-select" ng-model="inputs.status">
+      <option value="0" selected>Chưa cọc</option>
+      <option value="1" >Đã cọc</option>
+      <option value="2" >Đã bán</option>
+  
+    </select>
+  </div>
+
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary" ng-click="onSave()">Lưu</button>
+  </div>
+</form>
